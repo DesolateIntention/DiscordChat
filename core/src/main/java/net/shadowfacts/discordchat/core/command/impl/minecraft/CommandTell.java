@@ -46,7 +46,7 @@ public class CommandTell implements ICommand {
 
 	@Override
 	public String getDescription() {
-		return "Sends a private message to a player in MC";
+		return "```Sends a private message to a player in Minecraft.```";
 	}
 
 	@Override

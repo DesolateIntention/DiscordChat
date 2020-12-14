@@ -45,7 +45,7 @@ public class CommandTPS implements ICommand {
 			for (int dim : minecraftAdapter.getAllDimensions()) {
 				double tickTime = minecraftAdapter.getTickTime(dim);
 				double tps = Math.min(1000 / tickTime, 20);
-				message.append(String.format("Dimension %d: Tick time: %.3fms TPS: %.0f\n", dim, tickTime, tps));
+				message.append(String.format("```Dimension %d: Tick time: %.3fms TPS: %.0f\n```", dim, tickTime, tps));
 			}
 			sendResponse(message.toString(), channel, discordChat);
 		} else {
@@ -57,13 +57,13 @@ public class CommandTPS implements ICommand {
 			}
 			double tickTime = minecraftAdapter.getTickTime(dim);
 			double tps = Math.min(tickTime / 1000, 20);
-			sendResponse(String.format("Dimension %d: Tick time: %.3fms TPS: %.0f", dim, tickTime, tps), channel, discordChat);
+			sendResponse(String.format("```Dimension %d: Tick time: %.3fms TPS: %.0f```", dim, tickTime, tps), channel, discordChat);
 		}
 	}
 
 	@Override
 	public String getDescription() {
-		return "Displays TPS for a given dimension (or all dimensions, if none is specified)";
+		return "Displays TPS for a given dimension (or all dimensions if none is specified).";
 	}
 
 	@Override

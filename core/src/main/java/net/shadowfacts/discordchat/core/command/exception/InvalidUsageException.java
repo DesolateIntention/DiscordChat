@@ -9,7 +9,7 @@ import net.shadowfacts.discordchat.api.command.exception.CommandException;
 public class InvalidUsageException extends CommandException {
 
 	public InvalidUsageException(ICommand command) {
-		super("Invalid use of " + command.getName() + ". Usage: " + command.getName() + " " + command.getUsage());
+		super("```Invalid use of " + command.getName() + ". Usage: " + command.getName() + " " + command.getUsage() + "```");
 	}
 
 }

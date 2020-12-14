@@ -39,15 +39,15 @@ public class CommandRoleID implements ICommand {
 		String role = String.join(" ", args);
 		List<Role> roles = discordChat.getJDA().getGuildById(config.getServerID()).getRolesByName(role, true);
 		if (roles.isEmpty()) {
-			sendResponse("No such role: " + role, channel, discordChat);
+			sendResponse("```No such role: " + role + "```", channel, discordChat);
 		} else {
-			sendResponse("ID for role '" + roles.get(0).getName() + "' is " + roles.get(0).getId(), channel, discordChat);
+			sendResponse("```ID for role '" + roles.get(0).getName() + "' is " + roles.get(0).getId() + "```", channel, discordChat);
 		}
 	}
 
 	@Override
 	public String getDescription() {
-		return "Retrieves the ID for the role with the given name";
+		return "Retrieves the ID for the role with the given name.";
 	}
 
 	@Override

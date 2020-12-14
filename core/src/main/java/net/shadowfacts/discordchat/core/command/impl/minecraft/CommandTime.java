@@ -62,7 +62,7 @@ public class CommandTime implements ICommand {
 			phase = "Night";
 		}
 
-		String response = (phase == null ? "" : ("**" + phase + "**: ")) + time;
+		String response = (phase == null ? "" : ("```" + phase + ": ")) + time + ".```";
 		sendResponse(response, channel, discordChat);
 	}
 

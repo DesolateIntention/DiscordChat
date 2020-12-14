@@ -41,7 +41,7 @@ public class CommandReload implements ICommand {
 		try {
 			config.load();
 			permissionManager.load();
-			sendResponse("Configuration and permissions reloaded", channel, discordChat);
+			sendResponse("```Configuration and permissions reloaded.```", channel, discordChat);
 		} catch (IOException e) {
 			throw new CommandException(e);
 		}
@@ -49,7 +49,7 @@ public class CommandReload implements ICommand {
 
 	@Override
 	public String getDescription() {
-		return "Reloads configuration and permissions";
+		return "Reloads configuration and permissions.";
 	}
 
 	@Override

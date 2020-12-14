@@ -52,13 +52,13 @@ public class CommandCommands implements ICommand {
 					}
 				})
 				.collect(Collectors.toList());
-		String msg = "Commands (you have permission for **bolded** ones):\n" + String.join(", ", commands);
+		String msg = "```You have permission for **highlighted** commands.\n" + String.join(", ", commands) + "```";
 		sendResponse(msg, channel, discordChat);
 	}
 
 	@Override
 	public String getDescription() {
-		return "Lists all available commands";
+		return "Lists all available commands.";
 	}
 
 	@Override

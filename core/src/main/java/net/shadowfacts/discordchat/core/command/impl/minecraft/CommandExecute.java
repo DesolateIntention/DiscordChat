@@ -43,7 +43,7 @@ public class CommandExecute implements ICommand {
 
 	@Override
 	public String getDescription() {
-		return "Executes the given command in Minecraft";
+		return "Executes the given command in Minecraft.";
 	}
 
 	@Override

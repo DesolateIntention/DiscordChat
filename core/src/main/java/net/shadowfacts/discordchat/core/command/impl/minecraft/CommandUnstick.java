@@ -40,15 +40,15 @@ public class CommandUnstick implements ICommand {
 		if (args.length < 1) throw new InvalidUsageException(this);
 		String error = minecraftAdapter.teleportPlayerToSpawn(args[0]);
 		if (error == null) { // success
-			sendResponse("Unstuck player: " + args[0], channel, discordChat);
+			sendResponse("```Unstuck player: " + args[0] + "```", channel, discordChat);
 		} else {
-			sendResponse("Unable to unstick player: " + error, channel, discordChat);
+			sendResponse("```Unable to unstick player: " + error + "```", channel, discordChat);
 		}
 	}
 
 	@Override
 	public String getDescription() {
-		return "Teleports the player with the given name to spawn";
+		return "Teleports the player with the given name to spawn.";
 	}
 
 	@Override
