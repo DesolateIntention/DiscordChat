@@ -1,7 +1,7 @@
 package net.shadowfacts.discordchat.one_eleven_two;
 
 import com.google.common.collect.ImmutableList;
-import net.dv8tion.jda.core.entities.Role;
+import net.dv8tion.jda.api.entities.Role;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommandSender;

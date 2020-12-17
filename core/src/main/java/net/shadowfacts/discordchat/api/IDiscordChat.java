@@ -1,9 +1,9 @@
 package net.shadowfacts.discordchat.api;
 
-import net.dv8tion.jda.core.JDA;
-import net.dv8tion.jda.core.entities.Member;
-import net.dv8tion.jda.core.entities.MessageChannel;
-import net.dv8tion.jda.core.entities.PrivateChannel;
+import net.dv8tion.jda.api.JDA;
+import net.dv8tion.jda.api.entities.Member;
+import net.dv8tion.jda.api.entities.MessageChannel;
+import net.dv8tion.jda.api.entities.PrivateChannel;
 import net.shadowfacts.discordchat.api.command.ICommandManager;
 import net.shadowfacts.discordchat.api.permission.IPermissionManager;
 

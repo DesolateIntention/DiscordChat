@@ -1,7 +1,7 @@
 package net.shadowfacts.discordchat.core.permission;
 
 import com.google.gson.*;
-import net.dv8tion.jda.core.entities.Role;
+import net.dv8tion.jda.api.entities.Role;
 import net.shadowfacts.discordchat.api.IDiscordChat;
 import net.shadowfacts.discordchat.api.ILogger;
 import net.shadowfacts.discordchat.api.permission.IPermissionManager;
