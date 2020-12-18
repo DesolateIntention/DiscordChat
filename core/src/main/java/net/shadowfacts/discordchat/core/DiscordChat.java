@@ -5,6 +5,7 @@ import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
 import net.dv8tion.jda.core.entities.*;
 import net.dv8tion.jda.core.exceptions.ErrorResponseException;
+import net.dv8tion.jda.core.exceptions.InsufficientPermissionException;
 import net.dv8tion.jda.core.exceptions.RateLimitedException;
 import net.dv8tion.jda.core.requests.RestAction;
 import net.shadowfacts.discordchat.api.*;
@@ -159,6 +160,8 @@ public class DiscordChat implements IDiscordChat {
 				}
 			} catch (ErrorResponseException e) {
 				logger.error(e, "Error sending message to Discord: " + e.getErrorResponse().getCode() + " (" + e.getErrorResponse().getMeaning() + ")");
+			} catch (InsufficientPermissionException e) {
+				logger.error(e, "Error sending message to Discord: " + e.getMessage());
 			}
 		}
 	}
