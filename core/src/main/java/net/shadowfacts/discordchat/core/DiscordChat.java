@@ -87,10 +87,9 @@ public class DiscordChat implements IDiscordChat {
 
 		new Thread(() -> {
 			try {
-				jda = new JDABuilder(AccountType.BOT)
-						.setToken(config.getToken())
-						.addEventListener(new Listener(this))
-						.buildBlocking();
+				jda = JDABuilder.createDefault(config.getToken())
+						.addEventListeners(new Listener(this))
+						.build().awaitReady();
 			} catch (LoginException | IllegalArgumentException e) {
 				throw new RuntimeException("Invalid Discord token. Please verify your token in the DiscordChat config file.", e);
 			} catch (Exception e) {
